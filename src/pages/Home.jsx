@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
 
 const Home = () => {
-  const [productData, setProductData] = useState([]);
+  const [recipeData, setProductData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -130,18 +130,18 @@ const Home = () => {
       <div>
         <Container className="mt-4">
           <Row>
-            {productData.map((eachProduct) => (
+            {recipeData.map((eachRecipe) => (
               <Col lg={3} md={4} sm={6}>
                 <Card
                   class="shadow"
                   style={{ width: "17rem", margin: "15px", color: "grey",border:'solid,1px,whitesmoke',borderRadius:"20px" }}
                 >
-                  <Card.Img variant="top" src={eachProduct.image} />
+                  <Card.Img variant="top" src={eachRecipe.image} />
                   <Card.Body> 
-                    <Card.Title>{eachProduct.name}</Card.Title>
-                    <Card.Text>{eachProduct.cuisine}</Card.Text>
+                    <Card.Title>{eachRecipe.name}</Card.Title>
+                    <Card.Text>{eachRecipe.cuisine}</Card.Text>
                     <Link
-                      to={`/singlepage/${eachProduct.id}`}
+                      to={`/singlepage/${eachRecipe.id}`}
                       className="btn btn-success"
                       style={{ fontWeight: "600" }}
                     >
