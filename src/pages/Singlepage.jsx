@@ -8,7 +8,7 @@ import { FaRegStar } from "react-icons/fa";
 
 const Singlepage = () => {
   const { id } = useParams();
-  const [productData, setProductData] = useState([]);
+  const [recipeData, setProductData] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
@@ -22,11 +22,11 @@ const Singlepage = () => {
   return (
     <>
       <Card className="mt-5 shadow" style={{ width: "17rem", marginLeft: "200px",border:"solid ,1px,white",borderRadius:'5px' }}>
-        <Card.Img variant="top" src={productData.image} />
+        <Card.Img variant="top" src={recipeData.image} />
         <Card.Body>
-          <Card.Title>{productData.name}</Card.Title>
-          <Card.Title>{`PrepTime ${productData.prepTimeMinutes} : min`}</Card.Title>
-          <Card.Title>{`CookTime ${productData.cookTimeMinutes} : min`}</Card.Title>
+          <Card.Title>{recipeData.name}</Card.Title>
+          <Card.Title>{`PrepTime ${recipeData.prepTimeMinutes} : min`}</Card.Title>
+          <Card.Title>{`CookTime ${recipeData.cookTimeMinutes} : min`}</Card.Title>
         </Card.Body>
       </Card>
       <div
@@ -38,22 +38,22 @@ const Singlepage = () => {
       >
         <h1>Dish info...</h1>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'grey'}}>
-        {`Cuisine :  ${productData.cuisine}`}
+        {`Cuisine :  ${recipeData.cuisine}`}
         </div>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'grey'}}>
-        {`Serving : ${productData.servings}`}
+        {`Serving : ${recipeData.servings}`}
         </div>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'grey'}}>
-        {`Difficulty : ${productData.difficulty} level`}
+        {`Difficulty : ${recipeData.difficulty} level`}
         </div>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'grey'}}>
-        {`CaloriesPerServing : ${productData.caloriesPerServing}`}
+        {`CaloriesPerServing : ${recipeData.caloriesPerServing}`}
         </div>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'grey'}}>
-        {`Meal type : ${productData.mealType}`}
+        {`Meal type : ${recipeData.mealType}`}
         </div>
         <div style={{fontFamily:'monospace',fontSize:'20px',fontWeight:'600',color:'#f5c71a'}}>
-        {`Rating : ${productData.rating}`}
+        {`Rating : ${recipeData.rating}`}
         </div>
 
    </div> 
@@ -61,13 +61,13 @@ const Singlepage = () => {
      <div className=" container" style={{marginTop:'150px',marginLeft:'200px'}}>
       <h1 style={{color:'#C8D6D9',fontFamily:'inherit'}}>Ingredients...</h1>
       <div style={{fontSize:"20px",fontWeight:'600' }}>
-       {productData.ingredients}
+       {recipeData.ingredients}
        </div>
      </div>
      <div className="mt-4 container" style={{marginLeft:'200px'}} >
         <h1 style={{color:'#C8D6D9'}}>Instructions...</h1>
         <div style={{fontSize:"20px",fontWeight:'600' }} >
-     {productData.instructions}
+     {recipeData.instructions}
      </div>
      </div>
 
