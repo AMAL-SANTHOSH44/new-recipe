@@ -68,7 +68,7 @@ const Home = () => {
 
         <div style={{ marginTop: "100px" }}>
           <img
-            src="./public/1739989295412j_800x800-removebg-preview.png"
+            src="/1739989295412j_800x800-removebg-preview.png"
             alt=""
           />
         </div>
@@ -80,7 +80,7 @@ const Home = () => {
       >
         <div class="titile2">
           <img
-            src="./public/strawberries-water-splashes-fresh-healthy-food-strawberries-water-splashes-fresh-healthy-food-297649868-removebg-preview.png"
+            src="/strawberries-water-splashes-fresh-healthy-food-strawberries-water-splashes-fresh-healthy-food-297649868-removebg-preview.png"
             alt=""
           />
         </div>
